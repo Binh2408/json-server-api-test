@@ -7,6 +7,8 @@ const port = process.env.PORT || 8080;
 
 server.use(middlewares);
 server.use(router);
-server.listen(port, () => {
+
+// Quan trọng: chỉ định host là 0.0.0.0
+server.listen(port, '0.0.0.0', () => {
   console.log(`JSON Server is running on port ${port}`);
 });
